@@ -33,7 +33,7 @@ const localBusinessSchema = {
     ratingValue: "4.8",
     reviewCount: "100",
   },
-  areaServed: ["Boone, NC", "Blowing Rock, NC", "Banner Elk, NC"],
+  areaServed: ["Boone, NC", "Blowing Rock, NC", "Banner Elk, NC", "Linville, NC"],
   openingHours: ["Mo-Fr 09:00-17:00", "Sa 09:00-17:00"],
   url: "https://davethehandyguy.com",
 };

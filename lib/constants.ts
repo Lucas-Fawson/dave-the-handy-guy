@@ -73,6 +73,7 @@ export const SERVICE_AREAS = [
   { name: "Boone, NC", primary: true },
   { name: "Blowing Rock, NC", primary: false },
   { name: "Banner Elk, NC", primary: false },
+  { name: "Linville, NC", primary: false },
 ] as const;
 
 export const SERVICE_OPTIONS = [
