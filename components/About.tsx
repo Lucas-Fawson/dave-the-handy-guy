@@ -4,7 +4,7 @@ import { ABOUT_PARAGRAPHS, STATS } from "@/lib/constants";
 
 export default function About() {
   return (
-    <section id="about" className="bg-warm-white py-16 lg:py-24">
+    <section id="about" className="bg-cream py-16 lg:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-2">

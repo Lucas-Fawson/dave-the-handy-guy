@@ -19,7 +19,7 @@ export default function ServiceArea() {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="mt-4 text-slate">
-              I'm based out of Boone and I cover most of the High Country, plus a few towns over the Tennessee line.
+              I'm based out of Boone and I cover most of the High Country.
             </p>
           </ScrollReveal>
         </div>

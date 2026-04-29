@@ -35,7 +35,7 @@ const ICONS: Record<string, LucideIcon> = {
 
 export default function Services() {
   return (
-    <section id="services" className="bg-cream py-16 lg:py-24">
+    <section id="services" className="bg-warm-white py-16 lg:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto">
           <ScrollReveal>
@@ -60,7 +60,7 @@ export default function Services() {
             const Icon = ICONS[service.icon] ?? Wrench;
             return (
               <ScrollReveal key={service.name} delay={(i % 3) * 0.1}>
-                <div className="bg-warm-white rounded-xl p-6 border border-border shadow-[0_4px_24px_-8px_rgba(26,31,37,0.1)] h-full transition-shadow duration-300 hover:shadow-[0_12px_32px_-12px_rgba(26,31,37,0.18)]">
+                <div className="bg-cream rounded-xl p-6 border border-border shadow-[0_4px_24px_-8px_rgba(26,31,37,0.1)] h-full transition-shadow duration-300 hover:shadow-[0_12px_32px_-12px_rgba(26,31,37,0.18)]">
                   <Icon size={28} strokeWidth={1.5} className="text-rust" />
                   <h3 className="mt-3 text-xl font-semibold font-serif text-charcoal">
                     {service.name}
