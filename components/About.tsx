@@ -20,6 +20,14 @@ export default function About() {
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
                 <Photo
+                  src="/dave-cabin-work.webp"
+                  alt="Dave working at a customer's log cabin in the High Country"
+                  aspectRatio="aspect-[3/2]"
+                  sizes="(max-width: 1024px) 100vw, 30vw"
+                />
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <Photo
                   src="/award.jpg"
                   alt="Watauga Democrat Best of the Best Handyman 2025 award certificate"
                   aspectRatio="aspect-[4/3]"

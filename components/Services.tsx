@@ -71,16 +71,24 @@ export default function Services() {
           })}
         </div>
 
-        <ScrollReveal>
-          <div className="mt-16">
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <ScrollReveal>
+            <Photo
+              src="/dave-fan-install.webp"
+              alt="Dave on a ladder installing a ceiling fan in a cabin"
+              aspectRatio="aspect-[4/3]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
             <Photo
               src="/dave-ladder.webp"
               alt="Dave on a ladder installing a ceiling light fixture"
-              aspectRatio="aspect-[16/9]"
-              sizes="(max-width: 1024px) 100vw, 1024px"
+              aspectRatio="aspect-[4/3]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </div>
 
         <ScrollReveal>
           <div className="mt-12 text-center">

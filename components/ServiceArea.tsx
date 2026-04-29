@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import Photo from "./Photo";
 import { SERVICE_AREAS } from "@/lib/constants";
 
 export default function ServiceArea() {
@@ -23,6 +24,17 @@ export default function ServiceArea() {
             </p>
           </ScrollReveal>
         </div>
+
+        <ScrollReveal delay={0.25}>
+          <div className="mt-10 max-w-4xl mx-auto">
+            <Photo
+              src="/dave-mountain-deck.webp"
+              alt="A finished deck overlooking the Blue Ridge Mountains"
+              aspectRatio="aspect-[16/9]"
+              sizes="(max-width: 1024px) 100vw, 896px"
+            />
+          </div>
+        </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
           <div className="mt-10 flex flex-wrap justify-center gap-3 sm:gap-4">
