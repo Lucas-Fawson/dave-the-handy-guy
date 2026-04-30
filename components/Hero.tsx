@@ -63,11 +63,11 @@ export default function Hero() {
           </div>
 
           <ScrollReveal delay={0.2} className="lg:col-span-2">
-            <div className="relative aspect-[4/5] rounded-xl overflow-hidden rotate-2 transition-transform duration-700 hover:rotate-0 shadow-[0_24px_60px_-20px_rgba(26,31,37,0.25)]">
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-[0_24px_60px_-20px_rgba(26,31,37,0.25)]">
               <img
                 src="/dave-portrait.webp"
                 alt="Dave, owner of Dave The Handy Guy"
-                className="absolute -inset-2 w-[calc(100%+16px)] h-[calc(100%+16px)] object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
           </ScrollReveal>
