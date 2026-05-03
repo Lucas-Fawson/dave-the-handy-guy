@@ -93,8 +93,9 @@ export const SERVICE_OPTIONS = [
 
 export const ABOUT_PARAGRAPHS = [
   "There's no call center, no office manager, no crew of guys you've never met. It's just me. I give you the estimate, I do the work, and if something's not right, I'm the one you call about it.",
-  "I ran a successful carpet cleaning business out in California, and eventually sold it. When I moved out to the High Country, I started doing handyman work because honestly, I just like fixing things.",
-  "I just want to do good work for good people.",
+  "I started a stained glass business in my garage in the 70's — Dave's Glass Art. I ran it for 15 years and ended up being the third largest stained glass business in Los Angeles, and the largest in the San Gabriel Valley, with 13 employees. After running that successful business, I wound up selling it in 1990.",
+  "After that, I ran a successful carpet cleaning business out in Riverside, California, and eventually sold it too. When I moved out to the High Country, I started doing handyman work because honestly, I just like fixing things.",
+  "I built these businesses successfully by returning phone calls and always showing up on time.",
   "Being a veteran, I learned respect, being on time, and I ALWAYS return calls. Over 100 families around Boone, Blowing Rock, and Banner Elk have trusted me in their homes.",
 ] as const;
 
