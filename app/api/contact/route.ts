@@ -2,8 +2,55 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const ALLOWED_HOSTS = new Set([
+  "davethehandyguy.com",
+  "www.davethehandyguy.com",
+]);
+
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
+const RATE_LIMIT_MAX = 5;
+const ipHits = new Map<string, number[]>();
+
+function isAllowedHost(value: string | null): boolean {
+  if (!value) return false;
+  try {
+    const { hostname } = new URL(value);
+    if (hostname === "localhost") return true;
+    return ALLOWED_HOSTS.has(hostname);
+  } catch {
+    return false;
+  }
+}
+
 export async function POST(request: Request) {
-  const { name, phone, email, service, message } = await request.json();
+  const origin = request.headers.get("origin");
+  const referer = request.headers.get("referer");
+  const source = origin ?? referer;
+  if (!isAllowedHost(source)) {
+    return Response.json({ error: "Bad request" }, { status: 400 });
+  }
+
+  const forwardedFor = request.headers.get("x-forwarded-for");
+  if (forwardedFor) {
+    const ip = forwardedFor.split(",")[0].trim();
+    if (ip) {
+      const now = Date.now();
+      const cutoff = now - RATE_LIMIT_WINDOW_MS;
+      const recent = (ipHits.get(ip) ?? []).filter((t) => t > cutoff);
+      if (recent.length >= RATE_LIMIT_MAX) {
+        ipHits.set(ip, recent);
+        return Response.json({ error: "Bad request" }, { status: 429 });
+      }
+      recent.push(now);
+      ipHits.set(ip, recent);
+    }
+  }
+
+  const { name, phone, email, service, message, website } = await request.json();
+
+  if (typeof website === "string" && website.length > 0) {
+    return Response.json({ success: true });
+  }
 
   if (!name || !phone) {
     return Response.json(
